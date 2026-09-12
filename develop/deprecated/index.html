@@ -12,7 +12,7 @@
         <meta name="author" content="Roboflow">
       
       
-        <link rel="canonical" href="https://supervision.roboflow.com/develop/deprecated/">
+        <link rel="canonical" href="https://supervision.roboflow.com/latest/deprecated/">
       
       
         <link rel="prev" href="../changelog/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/supervision-lenny.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -83,6 +83,7 @@
 
 
 
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -119,6 +120,11 @@
   "codeRepository": "https://github.com/roboflow/supervision",
   "license": "https://github.com/roboflow/supervision/blob/develop/LICENSE.md",
   "description": "Open-source Python library for computer vision: load datasets, draw detections, count objects in zones, and track across frames.",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/LikeAction",
+    "userInteractionCount": 49848
+  },
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -140,7 +146,7 @@
   },
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://supervision.roboflow.com/developsearch/?q={search_term_string}",
+    "target": "https://supervision.roboflow.com/latest/search/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -183,13 +189,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Supervision",
-      "item": "https://supervision.roboflow.com/develop"
+      "item": "https://supervision.roboflow.com/latest"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Deprecated",
-      "item": "https://supervision.roboflow.com/develop/deprecated/"
+      "item": "https://supervision.roboflow.com/latest/deprecated/"
     }
   ]
 }
@@ -201,7 +207,7 @@
 <meta property="og:site_name" content="Supervision" />
 <meta property="og:title" content="Deprecated" />
 <meta property="og:description" content="Model-agnostic Python library for computer vision. Annotate, track, filter, and export detections from supported model outputs including RF-DETR, Roboflow Inference, Transformers, SAM, Detectron2, MMDetection, Ultralytics, and VLM parsers." />
-<meta property="og:url" content="https://supervision.roboflow.com/develop/deprecated/" />
+<meta property="og:url" content="https://supervision.roboflow.com/latest/deprecated/" />
 <meta property="og:image" content="https://media.roboflow.com/open-source/supervision/rf-supervision-banner.png" />
 <meta property="og:image:alt" content="Supervision computer vision Python library by Roboflow" />
 <meta property="og:image:width" content="1200" />
@@ -256,6 +262,22 @@
     </div>
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+
+
+
+
+
+You are reading the unreleased development version of the documentation, built from the <code>develop</code> branch.<br>
+APIs described here may change or may never ship in a release, so use the <a href="https://supervision.roboflow.com/latest"><strong>latest stable release</strong></a> instead.
+
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
         
       </div>
     
@@ -2270,6 +2292,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../metrics/match_detections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Match Detections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../metrics/common_values/" class="md-nav__link">
         
   
@@ -2995,6 +3045,8 @@
 <li><a href="https://supervision.roboflow.com/latest/detection/core/#supervision.detection.core.Detections.from_lmm"><code>sv.Detections.from_lmm</code></a> classmethod is deprecated in <code>supervision-0.26.0</code> and will be removed in <code>supervision-0.31.0</code>. Use <a href="https://supervision.roboflow.com/latest/detection/core/#supervision.detection.core.Detections.from_vlm"><code>sv.Detections.from_vlm</code></a> instead.</li>
 <li><code>KeyPoints.confidence</code> is deprecated in <code>supervision-0.29.0</code>. Use <code>KeyPoints.keypoint_confidence</code> instead. It will be removed in <code>supervision-0.32.0</code>.</li>
 <li>Public <code>validate_*</code> helper functions are deprecated in <code>supervision-0.29.0</code> and will be removed in <code>supervision-0.32.0</code>. Supervision internals now use private <code>_validate_*</code> helpers.</li>
+<li><code>merge_inner_detection_object_pair</code>, <code>merge_inner_detections_objects</code>, and <code>merge_inner_detections_objects_without_iou</code> in <code>supervision.detection.core</code> are deprecated in <code>supervision-0.29.0</code> and will be removed in <code>supervision-0.32.0</code>.</li>
+<li>Passing <code>overlap_metric</code> or <code>mask_dimension</code> positionally to <a href="https://supervision.roboflow.com/latest/detection/utils/iou_and_nms/#supervision.detection.utils.iou_and_nms.mask_non_max_merge"><code>sv.mask_non_max_merge</code></a> is deprecated in <code>supervision-0.30.0</code> and will be removed in <code>supervision-0.33.0</code>. Pass both by keyword instead.</li>
 </ul>
 <h1 id="removed">Removed<a class="headerlink" href="#removed" title="Permanent link">&para;</a></h1>
 <h3 id="0270">0.27.0<a class="headerlink" href="#0270" title="Permanent link">&para;</a></h3>
@@ -3051,7 +3103,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 12:30:32 UTC">July 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 7, 2026 18:54:08 UTC">September 7, 2026</span>
   </span>
 
     
@@ -3103,7 +3155,7 @@
       
         
           <a href="https://github.com/roboflow/supervision/tree/main/docs/deprecated.md" class="md-author md-author--more">
-            +8
+            +9
           </a>
         
       
@@ -3271,10 +3323,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking", "content.code.copy", "content.action.edit", "content.tooltips", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking", "content.code.copy", "content.action.edit", "content.tooltips", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/version-banner.js"></script>
       
         <script src="../javascripts/init_kapa_widget.js"></script>
       
